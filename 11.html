@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="11.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Count</th>
+          <th>Functions</th>
+          <th>Sub Total</th>
+        </tr>
+        <tr v-for="(item, index) in items" v-bind:key="item.id">
+          <!-- inja v-bind:key ro mizaram yani age be jadval id ezafe shod miyad hamun row ro update mikone na kolle safhe va age tedade data ziyad bashe ba moshkelati ruberu mishim ke ba inkar az una jologiri mikonim -->
+          <!-- age javalemun id nadasht miyam az index bejaye id estefade mikonam vali tasire ye idye uniqe bishtar hast -->
+          <td>{{index+1}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.price}} $</td>
+          <td>{{item.count}}</td>
+          <td style="background: rgb(130, 197, 199)">
+            <button id="plusbut" type="button" v-on:click="plus(item)">
+              +
+            </button>
+            &nbsp;
+            <button id="minusbut" type="button" v-on:click="minus(item)">
+              -
+            </button>
+          </td>
+          <td>{{ getSubTotal(item) }}</td>
+        </tr>
+        <tr>
+          <td colspan="5">Total</td>
+          <!-- ba colspan mitunam merge konam chanta cells dar rowe table ke inja goftam 5 ta mikham -->
+          <td>{{ getTotal() }}</td>
+        </tr>
+      </table>
+    </div>
+    <script src="11.js"></script>
+  </body>
+</html>
