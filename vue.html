@@ -19,8 +19,6 @@
           <th>Sub Total</th>
         </tr>
         <tr v-for="(item, index) in items" v-bind:key="item.id">
-          <!-- inja v-bind:key ro mizaram yani age be jadval id ezafe shod miyad hamun row ro update mikone na kolle safhe va age tedade data ziyad bashe ba moshkelati ruberu mishim ke ba inkar az una jologiri mikonim -->
-          <!-- age javalemun id nadasht miyam az index bejaye id estefade mikonam vali tasire ye idye uniqe bishtar hast -->
           <td>{{index+1}}</td>
           <td>{{item.name}}</td>
           <td>{{item.price}} $</td>
@@ -38,7 +36,6 @@
         </tr>
         <tr>
           <td colspan="5">Total</td>
-          <!-- ba colspan mitunam merge konam chanta cells dar rowe table ke inja goftam 5 ta mikham -->
           <td>{{ getTotal() }}</td>
         </tr>
       </table>
