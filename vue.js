@@ -13,14 +13,12 @@ const app = new Vue({
   data: {
     items: products,
   },
-  //
   methods: {
     plus: function (item) {
       if (item.count < 10) {
         item.count++;
       }
     },
-    //
     minus: function (item) {
       if (item.count > 0) {
         item.count--;
