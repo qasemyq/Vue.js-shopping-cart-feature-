@@ -1,4 +1,3 @@
-// Vue.js Shopping Cart feature
 
 const products = [
   { id: 1, name: "PC", price: 10, count: 1 },
