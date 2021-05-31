@@ -6,7 +6,6 @@ const products = [
   { id: 1, name: "Manitor", price: 40, count: 1 },
   { id: 1, name: "Mouse", price: 50, count: 1 },
 ];
-//
 const app = new Vue({
   el: "#app",
   data: {
